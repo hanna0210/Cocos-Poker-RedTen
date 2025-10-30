@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "6a5c4dd2-4205-4469-9422-3624d161855b",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 190,
+  "height": 160,
+  "platformSettings": {},
+  "subMetas": {
+    "shop_zuanshi7": {
+      "ver": "1.0.6",
+      "uuid": "a32e114b-3bf3-4ca5-b8d0-78a7b7345f36",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "6a5c4dd2-4205-4469-9422-3624d161855b",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -3.5,
+      "offsetY": -3,
+      "trimX": 2,
+      "trimY": 7,
+      "width": 179,
+      "height": 152,
+      "rawWidth": 190,
+      "rawHeight": 160,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
