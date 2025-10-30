@@ -21,20 +21,18 @@ cc.Class({
         }
         this.isRunningAnim = true;
         if (this.isDowned == false) { // 上往下
-            var moveBy1 = cc.moveBy(0.6, cc.p(0, -110));
-            var moveBy2 = cc.moveBy(0.15, cc.p(0, 10));
-            var callFunc = cc.callFunc(()=>{
-                this.isRunningAnim = null;
-            });
-            this.node.runAction(cc.sequence(moveBy1, moveBy2, callFunc));
+            cc.tween(this.node)
+                .by(0.6, { y: -110 })
+                .by(0.15, { y: 10 })
+                .call(()=>{ this.isRunningAnim = null; })
+                .start();
         }
         else {                      // 下往上
-            var moveBy1 = cc.moveBy(0.15, cc.p(0, -10));
-            var moveBy2 = cc.moveBy(0.6, cc.p(0, 110));
-            var callFunc = cc.callFunc(()=>{
-                this.isRunningAnim = null;
-            });
-            this.node.runAction(cc.sequence(moveBy1, moveBy2, callFunc));
+            cc.tween(this.node)
+                .by(0.15, { y: -10 })
+                .by(0.6, { y: 110 })
+                .call(()=>{ this.isRunningAnim = null; })
+                .start();
         }
         this.isDowned = !this.isDowned;
     },

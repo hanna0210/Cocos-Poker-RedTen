@@ -12,11 +12,17 @@ cc.Class({
         var w1 = this.node.width;
         var w2 = this.labelNode.width;
         if (w2 > w1) {
-            var moveTo1 = cc.moveTo(2, cc.p((w2-w1)/2+20, 0));
-            var moveTo2 = cc.moveTo(2, cc.p((w1-w2)/2-20));
-            var nothing = cc.moveBy(2, cc.p(0, 0));
-            this.labelNode.x = (w2-w1)/2+20;
-            this.labelNode.runAction(cc.repeatForever(cc.sequence(moveTo1, nothing, moveTo2, nothing)));
+            var x1 = (w2 - w1) / 2 + 20;
+            var x2 = (w1 - w2) / 2 - 20;
+            this.labelNode.x = x1;
+            var seq = cc.tween()
+                .to(2, { x: x1 })
+                .delay(2)
+                .to(2, { x: x2 })
+                .delay(2);
+            cc.tween(this.labelNode)
+                .repeatForever(seq)
+                .start();
         }
         else {
             this.labelNode.x = (w2-w1)/2+20;

@@ -128,7 +128,7 @@ cc.Class({
             
             var node = this.cardStorePlace["card_" + arr[i]];
             node.parent = this.pokerNodeList[i];
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
             node.width = this.pokerNodeList[i].width;
             node.height = this.pokerNodeList[i].height;
         }
@@ -155,7 +155,7 @@ cc.Class({
             
             var node = this.cardStorePlace["card_" + arr[i]];
             node.parent = this.pokerNodeList[i];
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
             node.width = this.pokerNodeList[i].width;
             node.height = this.pokerNodeList[i].height;
             i ++;

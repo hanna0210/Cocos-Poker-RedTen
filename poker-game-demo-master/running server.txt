@@ -1,0 +1,11 @@
+=================running server=======================
+Main server: http://localhost:8011
+Socket.IO IP server: http://localhost:8012
+OAuth login demo: http://localhost:8888
+Pay notify demo: http://localhost:8889
+
+node server.js
+cd "D:\3.Task\Poker\sample game\Cocos-Poker-Game\poker-game-demo-master\server\IpGet"; node socket_io_ip_server.js
+cd "D:\3.Task\Poker\sample game\Cocos-Poker-Game\poker-game-demo-master\server\OauthLoginDemo"; node login_demo.js
+cd "D:\3.Task\Poker\sample game\Cocos-Poker-Game\poker-game-demo-master\server\PayNotifyDemo"; node paynotice_demo.js
+===================================================

@@ -5,7 +5,7 @@ ui.createScreenMsg = function (msg) {
         if (!err) {
             var node = cc.instantiate(prefab);
             cc.director.getScene().getChildByName('Canvas').addChild(node);
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
             node.getComponent("ScreenMessage").showMessage(msg);
         }
     });
@@ -16,7 +16,7 @@ ui.createInviteCodePanel = function () {
         if (!err) {
             var node = cc.instantiate(prefab);
             cc.director.getScene().getChildByName('Canvas').addChild(node);
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
         }
     });
 };
@@ -26,7 +26,7 @@ ui.createEnterRoomPanel = function () {
         if (!err) {
             var node = cc.instantiate(prefab);
             cc.director.getScene().getChildByName('Canvas').addChild(node);
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
         }
     });
 };
@@ -36,7 +36,7 @@ ui.createUserInfoPanel = function (userInfo) {
         if (!err) {
             var node = cc.instantiate(prefab);
             cc.director.getScene().getChildByName('Canvas').addChild(node);
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
             node.getComponent("UserInfoPanel").updateInfo(userInfo);
         }
     });
@@ -47,7 +47,7 @@ ui.createBroadcastPanel = function (data) {
         if (!err) {
             var node = cc.instantiate(prefab);
             cc.director.getScene().getChildByName('Canvas').addChild(node);
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
             node.getComponent("BroadcastPanel").init(data);
         }
     });
@@ -58,7 +58,7 @@ ui.createHowToPlayPanel = function () {
         if (!err) {
             var node = cc.instantiate(prefab);
             cc.director.getScene().getChildByName('Canvas').addChild(node);
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
         }
     });
 };
@@ -68,7 +68,7 @@ ui.createSettingPanel = function () {
         if (!err) {
             var node = cc.instantiate(prefab);
             cc.director.getScene().getChildByName('Canvas').addChild(node);
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
         }
     });
 };
@@ -78,7 +78,7 @@ ui.createSharePanel = function () {
         if (!err) {
             var node = cc.instantiate(prefab);
             cc.director.getScene().getChildByName('Canvas').addChild(node);
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
         }
     });
 };
@@ -88,7 +88,7 @@ ui.createShopPanel = function () {
         if (!err) {
             var node = cc.instantiate(prefab);
             cc.director.getScene().getChildByName('Canvas').addChild(node);
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
         }
     });
 };
@@ -98,7 +98,7 @@ ui.createCreateRoomPanel = function () {
         if (!err) {
             var node = cc.instantiate(prefab);
             cc.director.getScene().getChildByName('Canvas').addChild(node);
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
         }
     });
 };
@@ -108,7 +108,7 @@ ui.createRecordMainPanel = function () {
         if (!err) {
             var node = cc.instantiate(prefab);
             cc.director.getScene().getChildByName('Canvas').addChild(node);
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
         }
     });
 };
@@ -119,7 +119,7 @@ ui.createRecordDetailPanel = function (data) {
             var node = cc.instantiate(prefab);
             cc.director.getScene().getChildByName('Canvas').addChild(node);
             node.getComponent('RecordDetailPanel').initPanel(data);
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
         }
     });
 };

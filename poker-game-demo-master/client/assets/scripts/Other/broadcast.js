@@ -14,11 +14,12 @@ cc.Class({
         
         
         var deltaX = - this.node.width * 2;
-        var moveBy = cc.moveBy(20, cc.p(deltaX, 0));
-        var callFunc = cc.callFunc(()=>{
-            this.wordNode.setPosition(cc.p(0, 0));
-        })
-        this.wordNode.runAction(cc.repeatForever(cc.sequence(moveBy, callFunc)));
+        var seq = cc.tween()
+            .by(20, { x: deltaX })
+            .call(()=>{ this.wordNode.setPosition(cc.v2(0, 0)); });
+        cc.tween(this.wordNode)
+            .repeatForever(seq)
+            .start();
     },
 
     showString: function (s) {

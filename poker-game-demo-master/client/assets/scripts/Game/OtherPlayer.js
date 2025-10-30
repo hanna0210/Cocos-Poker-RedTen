@@ -163,7 +163,7 @@ cc.Class({
             
             var node = this.cardStorePlace["card_" + arr[i]];
             node.parent = this.cardNodeList[i];
-            node.setPosition(cc.p(0, 0));
+            node.setPosition(0, 0);
             node.width = this.cardNodeList[i].width;
             node.height = this.cardNodeList[i].height;
         }

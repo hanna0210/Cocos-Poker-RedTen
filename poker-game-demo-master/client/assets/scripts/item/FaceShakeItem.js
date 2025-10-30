@@ -18,12 +18,15 @@ cc.Class({
                 var frame = atlas.getSpriteFrame('game_face' + picId);
                 this.node.getComponent(cc.Sprite).spriteFrame = frame;
             }
-            var fadeOut = cc.fadeOut(0.5);
-            var nothing = cc.moveBy(0.5, cc.p(0, 0));
-            var moveUp = cc.moveBy(0.5, cc.p(0, 10));
-            var moveDown = cc.moveBy(0.5, cc.p(0, -10));
             this.node.opacity = 255;
-            this.node.runAction(cc.sequence(moveUp, moveDown, moveUp, moveDown, nothing, fadeOut));
+            cc.tween(this.node)
+                .by(0.5, { y: 10 })
+                .by(0.5, { y: -10 })
+                .by(0.5, { y: 10 })
+                .by(0.5, { y: -10 })
+                .delay(0.5)
+                .to(0.5, { opacity: 0 })
+                .start();
         });
     },
 

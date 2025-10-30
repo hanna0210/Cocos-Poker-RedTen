@@ -9,10 +9,14 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.node.rotation = this.startRotation;
-        var rotateTo1 = cc.rotateTo(this.deltaTime, this.endRotation);
-        var rotateTo2 = cc.rotateTo(this.deltaTime, this.startRotation);
-        this.node.runAction(cc.repeatForever(cc.sequence(rotateTo1, rotateTo2)));
+        // rotation is deprecated in v2.x, use angle (opposite sign)
+        this.node.angle = -this.startRotation;
+        var seq = cc.tween()
+            .to(this.deltaTime, { angle: -this.endRotation })
+            .to(this.deltaTime, { angle: -this.startRotation });
+        cc.tween(this.node)
+            .repeatForever(seq)
+            .start();
     },
 
     // called every frame, uncomment this function to activate update callback
